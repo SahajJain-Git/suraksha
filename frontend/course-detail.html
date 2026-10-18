@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Study detailed disaster safety modules, evidence-based DOs and DON'Ts, and prepare for certified safety assessments.">
+  <title>Lesson Viewer - Suraksha Disaster Preparedness</title>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/learning.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Emergency Banner -->
+  <aside class="emergency-banner" aria-label="Official Emergency Contacts and Educational Notice">
+    <div class="container">
+      <div class="emergency-banner-content">
+        <span class="emergency-tag">Emergency Contacts</span>
+        <div class="emergency-numbers">
+          <span>All Emergencies: <a href="tel:112">112</a></span>
+          <span>Fire: <a href="tel:101">101</a></span>
+          <span>Ambulance: <a href="tel:102">102</a></span>
+          <span>NDMA: <a href="tel:1078">1078</a></span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span class="emergency-disclaimer-pill">Educational Platform • Not an Emergency Dispatch Service</span>
+        <button type="button" class="banner-dismiss-btn" aria-label="Dismiss emergency banner" style="background: none; border: none; color: #fff; cursor: pointer; padding: 2px 4px; font-size: 14px;">✕</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Suraksha Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-name">Suraksha</span>
+          <span class="brand-tagline">Disaster Preparedness Platform</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="courses.html" class="nav-link active">Courses</a></li>
+          <li><a href="first-aid.html" class="nav-link">First Aid</a></li>
+          <li><a href="mock-drill.html" class="nav-link">Mock Drills</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-actions-mobile" style="display: none;">
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Course Banner -->
+    <header class="page-header" style="padding: 2.5rem 0;">
+      <div class="container">
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <a href="courses.html" style="color: #cbd5e1; font-size: 0.85rem;">&larr; Back to Catalogue</a>
+          <span style="color: #64748b;">•</span>
+          <span id="courseCategoryBadge" class="badge badge-danger">Hazard</span>
+        </div>
+        <h1 id="courseTitle" style="font-size: 2rem;">Loading Course Title...</h1>
+        <p id="courseSummary" style="font-size: 1rem; max-width: 720px; color: #cbd5e1;">Loading description...</p>
+        
+        <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a id="quizLinkBtn" href="quiz.html" class="btn btn-accent btn-sm">Take Certified Quiz</a>
+          <a id="drillLinkBtn" href="mock-drill.html" class="btn btn-outline-white btn-sm">Practice Virtual Drill</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Lesson Viewer Layout -->
+    <section class="section" style="padding: 2.5rem 0 4rem 0;">
+      <div class="container">
+        <div class="course-viewer-layout">
+          
+          <!-- Sidebar: Module Navigator -->
+          <aside class="lesson-sidebar" aria-label="Course Lesson Modules">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span class="lesson-sidebar-title" style="margin-bottom: 0; border-bottom: none; padding-bottom: 0;">Modules</span>
+              <span id="courseProgressBadge" class="badge badge-success" style="font-size: 0.7rem;">0% Complete</span>
+            </div>
+            <ul id="lessonList" class="lesson-list">
+              <!-- Populated by js/course-detail.js -->
+            </ul>
+          </aside>
+
+          <!-- Main Lesson Content Area -->
+          <article class="lesson-content-card">
+            <h2 id="activeLessonTitle" style="font-size: 1.75rem; margin-bottom: 1.25rem;">
+              Module Loading...
+            </h2>
+
+            <div id="activeLessonContent" style="font-size: 1.05rem; line-height: 1.7; color: var(--color-text-main); margin-bottom: 2rem;">
+              <!-- Populated by js/course-detail.js -->
+            </div>
+
+            <!-- DOs and DON'Ts Section -->
+            <div class="dos-donts-grid">
+              <div class="dos-panel">
+                <h4>
+                  <svg style="width: 1.25rem; height: 1.25rem;" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  Crucial DOs (Safe Actions)
+                </h4>
+                <ul id="dosContainer" class="guideline-list"></ul>
+              </div>
+
+              <div class="donts-panel">
+                <h4>
+                  <svg style="width: 1.25rem; height: 1.25rem;" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                  </svg>
+                  Crucial DON'Ts (Deadly Mistakes)
+                </h4>
+                <ul id="dontsContainer" class="guideline-list"></ul>
+              </div>
+            </div>
+
+            <!-- Lesson Navigation Controls -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2.5rem; border-top: 1px solid var(--color-border-subtle); padding-top: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+              <button type="button" id="prevLessonBtn" class="btn btn-secondary">
+                &larr; Previous Module
+              </button>
+              <button type="button" id="nextLessonBtn" class="btn btn-primary">
+                Mark Complete & Next &rarr;
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>
+              </svg>
+            </div>
+            <div class="brand-text-group">
+              <span class="brand-name">Suraksha</span>
+              <span class="brand-tagline">Disaster Preparedness Platform</span>
+            </div>
+          </div>
+          <p>
+            An open educational platform empowering schools, students, and citizens with evidence-based disaster mitigation knowledge, practical first-aid rules, and simulated decision drills.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Course Catalogue</a></li>
+            <li><a href="first-aid.html">First-Aid Protocols</a></li>
+            <li><a href="mock-drill.html">Virtual Mock Drills</a></li>
+            <li><a href="about.html">About the Mission</a></li>
+            <li><a href="contact.html">Contact & Feedback</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Hazards</h4>
+          <ul class="footer-links">
+            <li><a href="courses.html#earthquake">Earthquake Safety</a></li>
+            <li><a href="courses.html#flood">Flood Mitigation</a></li>
+            <li><a href="courses.html#fire">Fire Evacuation</a></li>
+            <li><a href="courses.html#cyclone">Cyclone Response</a></li>
+            <li><a href="first-aid.html#cpr">CPR Basics</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Emergency Hotlines</h4>
+          <ul class="footer-links" style="color: #cbd5e1; font-size: 0.85rem;">
+            <li><strong>National Emergency:</strong> 112</li>
+            <li><strong>Fire Services:</strong> 101</li>
+            <li><strong>Medical Ambulance:</strong> 102 / 108</li>
+            <li><strong>National Disaster (NDMA):</strong> 1078</li>
+            <li><strong>Child Helpline:</strong> 1098</li>
+            <li><strong>Women Helpline:</strong> 1091</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>Suraksha Platform</strong>. Built strictly for educational preparedness and training.
+        </div>
+        <div>
+          <span>Safety Notice: In a life-threatening emergency, immediately contact official authorities at <strong>112</strong>.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/course-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a free educational account on Suraksha to learn disaster mitigation, take certified quizzes, and run virtual emergency drills.">
+  <title>Register - Suraksha Platform</title>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/learning.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Suraksha Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-name">Suraksha</span>
+          <span class="brand-tagline">Disaster Preparedness Platform</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="courses.html" class="nav-link">Courses</a></li>
+          <li><a href="first-aid.html" class="nav-link">First Aid</a></li>
+          <li><a href="mock-drill.html" class="nav-link">Mock Drills</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      <div class="auth-wrapper">
+        <div class="form-card">
+          <div class="auth-header">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>
+              </svg>
+            </div>
+            <h1 style="font-size: 1.75rem; margin-bottom: 0.25rem;">Create Your Account</h1>
+            <p style="font-size: 0.875rem;">Join students and educators learning life-saving resilience.</p>
+          </div>
+
+          <!-- Dynamic Alerts Container -->
+          <div id="registerAlertContainer" aria-live="polite"></div>
+
+          <form id="registerForm" novalidate>
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="regFullName" class="form-label">Full Name <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="regFullName"
+                name="fullName"
+                class="form-control"
+                placeholder="e.g. Rahul Verma"
+                autocomplete="name"
+                required
+              >
+              <div class="form-feedback error-text"></div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="regEmail" class="form-label">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="regEmail"
+                name="email"
+                class="form-control"
+                placeholder="e.g. rahul.verma@school.edu"
+                autocomplete="email"
+                required
+              >
+              <div class="form-feedback error-text"></div>
+            </div>
+
+            <!-- Role Selector -->
+            <div class="form-group">
+              <label for="regRole" class="form-label">Account Role <span class="required-mark" aria-hidden="true">*</span></label>
+              <select id="regRole" name="role" class="form-control" required>
+                <option value="ROLE_STUDENT" selected>Student / Learner</option>
+                <option value="ROLE_TEACHER">Teacher / Safety Coordinator</option>
+                <option value="ROLE_CITIZEN">Community Citizen</option>
+              </select>
+              <div class="form-feedback error-text"></div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+              <label for="regPassword" class="form-label">Password <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="password"
+                id="regPassword"
+                name="password"
+                class="form-control"
+                placeholder="At least 8 characters"
+                autocomplete="new-password"
+                required
+              >
+              <div class="form-feedback error-text"></div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+              <label for="regConfirmPassword" class="form-label">Confirm Password <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="password"
+                id="regConfirmPassword"
+                name="confirmPassword"
+                class="form-control"
+                placeholder="Repeat password"
+                autocomplete="new-password"
+                required
+              >
+              <div class="form-feedback error-text"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+              Register Account &rarr;
+            </button>
+          </form>
+
+          <div style="text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: var(--color-text-muted);">
+            Already have an account? <a href="login.html" style="font-weight: 600;">Sign in here</a>
+          </div>
+
+          <!-- Educational Disclaimer Callout -->
+          <div class="callout callout-info" style="margin-top: 1.5rem; padding: 0.75rem 1rem; font-size: 0.8rem;">
+            <div>
+              ℹ️ <strong>Security Architecture (Milestone 8):</strong> Registration sends data directly to Spring Security at <code>POST /api/auth/register</code>. Passwords are never saved in plaintext; BCrypt (strength factor 10) hashes passwords server-side before storing in MySQL.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container text-center" style="font-size: 0.8rem;">
+      <p>&copy; 2026 Suraksha Platform. Built for educational disaster preparedness.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

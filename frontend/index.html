@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Suraksha is an educational disaster preparedness platform for students and schools, featuring courses, interactive quizzes, first-aid guides, and virtual mock drills.">
+  <title>Suraksha - Disaster Preparedness & Management Learning Platform</title>
+
+  <!-- Google / System Fonts Preconnect & Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Keyboard Accessibility: Skip to Main Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Emergency Top Hotline Banner -->
+  <aside class="emergency-banner" aria-label="Official Emergency Contacts and Educational Notice">
+    <div class="container">
+      <div class="emergency-banner-content">
+        <span class="emergency-tag">
+          <svg style="width: 14px; height: 14px;" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+          </svg>
+          Emergency Contacts
+        </span>
+        <div class="emergency-numbers">
+          <span>All Emergencies: <a href="tel:112">112</a></span>
+          <span>Fire: <a href="tel:101">101</a></span>
+          <span>Ambulance: <a href="tel:102">102</a></span>
+          <span>NDMA Helpline: <a href="tel:1078">1078</a></span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span class="emergency-disclaimer-pill">Educational Platform • Not an Emergency Dispatch Service</span>
+        <button type="button" class="banner-dismiss-btn" aria-label="Dismiss emergency banner" style="background: none; border: none; color: #fff; cursor: pointer; padding: 2px 4px; font-size: 14px;">✕</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <!-- Brand Identity -->
+      <a href="index.html" class="brand" aria-label="Suraksha Home">
+        <div class="brand-icon">
+          <!-- Shield with Heart Icon (SVG) -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-name">Suraksha</span>
+          <span class="brand-tagline">Disaster Preparedness Platform</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="courses.html" class="nav-link">Courses</a></li>
+          <li><a href="first-aid.html" class="nav-link">First Aid</a></li>
+          <li><a href="mock-drill.html" class="nav-link">Mock Drills</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          
+          <!-- Mobile-only Action Buttons -->
+          <li class="nav-actions-mobile" style="display: none;">
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Auth Actions -->
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content">
+          <span class="badge badge-hero">
+            🛡️ Educational Preparedness for Schools & Communities
+          </span>
+          <h1 id="hero-title">
+            Learn to Prepare.<br>
+            Respond Safely.<br>
+            Protect What Matters.
+          </h1>
+          <p>
+            Suraksha empowers students and educational institutions with essential disaster management knowledge, verified first-aid guidelines, and interactive virtual drills to replace panic with informed, life-saving action.
+          </p>
+          <div class="hero-actions">
+            <a href="courses.html" class="btn btn-accent btn-lg">Explore Safety Courses</a>
+            <a href="mock-drill.html" class="btn btn-outline-white btn-lg">Try Virtual Mock Drill</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Critical Educational Notice Callout -->
+    <section class="container" style="margin-top: -2rem; position: relative; z-index: 2;" aria-label="Educational Notice">
+      <div class="callout callout-warning">
+        <div class="callout-icon" aria-hidden="true">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div>
+          <div class="callout-title">Important Educational Purpose</div>
+          <div class="callout-body">
+            Suraksha is an educational training environment developed to build disaster awareness. It does <strong>not</strong> replace real-time emergency services (Dial 112 for immediate emergencies) or certified clinical first-responder medical licensing.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Hazard Learning Areas -->
+    <section class="section" aria-labelledby="hazards-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="subtitle">Disaster Curriculum</div>
+          <h2 id="hazards-heading">Core Hazard Preparedness Areas</h2>
+          <p>Explore categorized, step-by-step guides developed in accordance with authoritative national disaster management frameworks.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Earthquake Card -->
+          <article class="card">
+            <div class="card-icon danger">
+              <!-- Ground Vibration / Cracking SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2L1 21h22L12 2zm0 4.5l6.5 11.5h-13L12 6.5zM11 11h2v3h-2zm0 4h2v2h-2z"/>
+              </svg>
+            </div>
+            <span class="badge badge-danger" style="width: fit-content; margin-bottom: 0.5rem;">Geological Hazard</span>
+            <h3 class="card-title">Earthquake Safety</h3>
+            <div class="card-body">
+              Learn the critical <em>Drop, Cover, and Hold On</em> technique, identify non-structural hazards inside classrooms, and build a 72-hour family emergency kit.
+            </div>
+            <div class="card-footer">
+              <span class="text-muted" style="font-size: 0.8rem;">4 Lessons • 1 Quiz</span>
+              <a href="courses.html" class="btn btn-secondary btn-sm">View Module &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Flood Safety Card -->
+          <article class="card">
+            <div class="card-icon primary">
+              <!-- Water Wave SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19H19.65l-.62-1.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+              </svg>
+            </div>
+            <span class="badge badge-primary" style="width: fit-content; margin-bottom: 0.5rem;">Hydrological Hazard</span>
+            <h3 class="card-title">Floods & Flash Floods</h3>
+            <div class="card-body">
+              Understand warning sirens, recognize flash flood dangers, why you must never cross moving water over 15cm deep, and post-flood water purification.
+            </div>
+            <div class="card-footer">
+              <span class="text-muted" style="font-size: 0.8rem;">5 Lessons • 1 Quiz</span>
+              <a href="courses.html" class="btn btn-secondary btn-sm">View Module &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Fire Safety Card -->
+          <article class="card">
+            <div class="card-icon accent">
+              <!-- Fire Flame SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.5s-4.5 4.5-4.5 9c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5c0-4.5-6.5-9-6.5-9zm-1 12c-1.1 0-2-.9-2-2 0-1.5 2-3.5 2-3.5s2 2 2 3.5c0 1.1-.9 2-2 2z"/>
+              </svg>
+            </div>
+            <span class="badge badge-accent" style="width: fit-content; margin-bottom: 0.5rem;">Thermal Hazard</span>
+            <h3 class="card-title">Fire Prevention & Response</h3>
+            <div class="card-body">
+              Master the <em>PASS</em> extinguisher protocol (Pull, Aim, Squeeze, Sweep), safe evacuation through toxic smoke (Crawl Low), and electrical fire containment.
+            </div>
+            <div class="card-footer">
+              <span class="text-muted" style="font-size: 0.8rem;">4 Lessons • 1 Quiz</span>
+              <a href="courses.html" class="btn btn-secondary btn-sm">View Module &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Cyclone Safety Card -->
+          <article class="card">
+            <div class="card-icon primary">
+              <!-- Cyclone Spiral SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"/>
+              </svg>
+            </div>
+            <span class="badge badge-primary" style="width: fit-content; margin-bottom: 0.5rem;">Meteorological Hazard</span>
+            <h3 class="card-title">Cyclones & Storm Surges</h3>
+            <div class="card-body">
+              Learn how to track color-coded storm warnings, secure windows and roofs, stock emergency essentials, and avoid the deceptive calm during the cyclone's eye.
+            </div>
+            <div class="card-footer">
+              <span class="text-muted" style="font-size: 0.8rem;">3 Lessons • 1 Quiz</span>
+              <a href="courses.html" class="btn btn-secondary btn-sm">View Module &rarr;</a>
+            </div>
+          </article>
+
+          <!-- First Aid Essentials -->
+          <article class="card">
+            <div class="card-icon success">
+              <!-- Heart + First Aid Cross SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35zM11 7v3H8v2h3v3h2v-3h3v-2h-3V7h-2z"/>
+              </svg>
+            </div>
+            <span class="badge badge-success" style="width: fit-content; margin-bottom: 0.5rem;">Medical Preparedness</span>
+            <h3 class="card-title">Emergency First Aid</h3>
+            <div class="card-body">
+              Actionable protocols for severe bleeding control, burn care (cooling with water, no ice), basic CPR awareness, heat exhaustion recovery, and fracture stabilization.
+            </div>
+            <div class="card-footer">
+              <span class="text-muted" style="font-size: 0.8rem;">5 Guides • Visual Steps</span>
+              <a href="first-aid.html" class="btn btn-secondary btn-sm">Open Center &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Mock Drill Simulation Card -->
+          <article class="card">
+            <div class="card-icon accent">
+              <!-- Target / Compass Simulation SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+              </svg>
+            </div>
+            <span class="badge badge-accent" style="width: fit-content; margin-bottom: 0.5rem;">Virtual Simulation</span>
+            <h3 class="card-title">Interactive Mock Drills</h3>
+            <div class="card-body">
+              Step into simulated scenarios where your choices determine survival outcomes. Get instant educational feedback without risk or real-world emergency interference.
+            </div>
+            <div class="card-footer">
+              <span class="text-muted" style="font-size: 0.8rem;">3 Scenarios • Interactive</span>
+              <a href="mock-drill.html" class="btn btn-secondary btn-sm">Launch Drill &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Features / Educational Methodology -->
+    <section class="section section-alt" aria-labelledby="methodology-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="subtitle">The Suraksha Methodology</div>
+          <h2 id="methodology-heading">How Suraksha Builds Real Readiness</h2>
+          <p>Disaster response is not about memorizing complex manuals—it is about forming calm, automated habits before emergencies occur.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card" style="text-align: center; align-items: center;">
+            <div class="card-icon primary" style="margin-left: auto; margin-right: auto;">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+              </svg>
+            </div>
+            <h3 class="card-title">1. Structured Lessons</h3>
+            <p class="card-body">Bite-sized, jargon-free lessons that explain the science of hazards and outline clear DOs and DON'Ts verified against emergency guidelines.</p>
+          </div>
+
+          <div class="card" style="text-align: center; align-items: center;">
+            <div class="card-icon accent" style="margin-left: auto; margin-right: auto;">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+              </svg>
+            </div>
+            <h3 class="card-title">2. Virtual Simulations</h3>
+            <p class="card-body">Scenario-based mock drills present unexpected challenges, forcing learners to evaluate risks, choose exits, and review the consequences safely.</p>
+          </div>
+
+          <div class="card" style="text-align: center; align-items: center;">
+            <div class="card-icon success" style="margin-left: auto; margin-right: auto;">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <h3 class="card-title">3. Verified Knowledge Checks</h3>
+            <p class="card-body">Objective quizzes scored on the server evaluate understanding, ensuring students achieve genuine readiness before receiving completion certificates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Immediate Safety Rules Quick Reference -->
+    <section class="section" aria-labelledby="quick-safety-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="subtitle">Quick Reference Guide</div>
+          <h2 id="quick-safety-heading">The Three Golden Rules of Emergency Survival</h2>
+          <p>Commit these fundamentals to memory. In an emergency, simple instinctive actions save lives.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card" style="border-top: 4px solid var(--color-danger);">
+            <h3 class="card-title" style="color: var(--color-danger);">1. In an Earthquake</h3>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">DROP, COVER, HOLD ON</h4>
+            <p class="card-body">
+              <strong>Drop</strong> to your hands and knees. <strong>Cover</strong> your head and neck under a sturdy table. <strong>Hold on</strong> until shaking stops. Never run outside while walls and glass are actively vibrating.
+            </p>
+          </div>
+
+          <div class="card" style="border-top: 4px solid var(--color-accent);">
+            <h3 class="card-title" style="color: var(--color-accent);">2. In Structural Smoke</h3>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">CRAWL LOW UNDER SMOKE</h4>
+            <p class="card-body">
+              Smoke and toxic hot gases rise to the ceiling. The cleanest, coolest air is 30 to 60 cm above the floor. Drop to your hands and crawl toward the nearest marked fire exit.
+            </p>
+          </div>
+
+          <div class="card" style="border-top: 4px solid var(--color-primary-light);">
+            <h3 class="card-title" style="color: var(--color-primary-light);">3. In Flash Flooding</h3>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">TURN AROUND, DON'T DROWN</h4>
+            <p class="card-body">
+              Just 15 cm of moving floodwater can knock an adult off their feet; 30 cm can float most passenger cars. Never attempt to walk, wade, or drive through flooded roads.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="section section-alt" style="text-align: center;">
+      <div class="container container-narrow">
+        <h2>Ready to build life-saving skills for your school or family?</h2>
+        <p style="font-size: 1.125rem; margin-bottom: 2rem;">
+          Join students and educators learning disaster resilience today. Free, accessible, and designed for all ages.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="register.html" class="btn btn-primary btn-lg">Create Free Student Account</a>
+          <a href="about.html" class="btn btn-secondary btn-lg">Learn More About Suraksha</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Comprehensive Accessible Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>
+              </svg>
+            </div>
+            <div class="brand-text-group">
+              <span class="brand-name">Suraksha</span>
+              <span class="brand-tagline">Disaster Preparedness Platform</span>
+            </div>
+          </div>
+          <p>
+            An open educational platform empowering schools, students, and citizens with evidence-based disaster mitigation knowledge, practical first-aid rules, and simulated decision drills.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Course Catalogue</a></li>
+            <li><a href="first-aid.html">First-Aid Protocols</a></li>
+            <li><a href="mock-drill.html">Virtual Mock Drills</a></li>
+            <li><a href="about.html">About the Mission</a></li>
+            <li><a href="contact.html">Contact & Feedback</a></li>
+          </ul>
+        </div>
+
+        <!-- Educational Modules -->
+        <div>
+          <h4 class="footer-heading">Hazards</h4>
+          <ul class="footer-links">
+            <li><a href="courses.html#earthquake">Earthquake Safety</a></li>
+            <li><a href="courses.html#flood">Flood Mitigation</a></li>
+            <li><a href="courses.html#fire">Fire Evacuation</a></li>
+            <li><a href="courses.html#cyclone">Cyclone Response</a></li>
+            <li><a href="first-aid.html#cpr">CPR Basics</a></li>
+          </ul>
+        </div>
+
+        <!-- Official Helplines Directory -->
+        <div>
+          <h4 class="footer-heading">Emergency Hotlines</h4>
+          <ul class="footer-links" style="color: #cbd5e1; font-size: 0.85rem;">
+            <li><strong>National Emergency:</strong> 112</li>
+            <li><strong>Fire Services:</strong> 101</li>
+            <li><strong>Medical Ambulance:</strong> 102 / 108</li>
+            <li><strong>National Disaster (NDMA):</strong> 1078</li>
+            <li><strong>Child Helpline:</strong> 1098</li>
+            <li><strong>Women Helpline:</strong> 1091</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Disclaimer & Copyright -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>Suraksha Platform</strong>. Built strictly for educational preparedness and training.
+        </div>
+        <div>
+          <span>Safety Notice: In a life-threatening emergency, immediately contact official authorities at <strong>112</strong>.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,480 @@
+/* ==========================================================================
+   Suraksha - Learning Pages Component Styles (Milestone 3)
+   Courses, Lesson Viewer, Quizzes, Mock Drills, First Aid, and Auth UI.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Filter Bar & Search Controls (Course Catalogue)
+   -------------------------------------------------------------------------- */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
+  flex-wrap: wrap;
+}
+
+.filter-pills {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-surface);
+  color: var(--color-text-main);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-primary-light);
+  background: var(--color-primary-subtle);
+}
+
+.filter-btn.active {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input-group {
+  position: relative;
+  min-width: 260px;
+}
+
+.search-input-group input {
+  padding-left: 2.5rem;
+}
+
+.search-input-group .search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   2. Course Detail & Lesson Viewer Layout
+   -------------------------------------------------------------------------- */
+.course-viewer-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--spacing-8);
+  align-items: start;
+}
+
+.lesson-sidebar {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  position: sticky;
+  top: 5.5rem;
+}
+
+.lesson-sidebar-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-3);
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.lesson-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.lesson-item-btn {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--color-text-main);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+  transition: all var(--transition-fast);
+}
+
+.lesson-item-btn:hover {
+  background: var(--color-bg-alt);
+}
+
+.lesson-item-btn.active {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  border-color: rgba(30, 58, 138, 0.2);
+}
+
+.lesson-badge {
+  font-size: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-border);
+  color: var(--color-text-main);
+  flex-shrink: 0;
+}
+
+.lesson-item-btn.completed .lesson-badge {
+  background: var(--color-success);
+  color: #fff;
+}
+
+.lesson-content-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--shadow-sm);
+}
+
+.dos-donts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-6);
+  margin: var(--spacing-6) 0;
+}
+
+.dos-panel {
+  background: var(--color-success-subtle);
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-5);
+}
+
+.dos-panel h4 {
+  color: #065f46;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+  font-size: 1rem;
+}
+
+.donts-panel {
+  background: var(--color-danger-subtle);
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-5);
+}
+
+.donts-panel h4 {
+  color: #991b1b;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+  font-size: 1rem;
+}
+
+.guideline-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+}
+
+.guideline-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  line-height: 1.5;
+}
+
+.dos-panel .guideline-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #059669;
+  font-weight: bold;
+}
+
+.donts-panel .guideline-list li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------
+   3. Interactive Quiz Runner
+   -------------------------------------------------------------------------- */
+.quiz-container {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.quiz-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--spacing-6);
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  transition: width 300ms ease;
+}
+
+.quiz-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-6);
+}
+
+.quiz-options-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  margin: var(--spacing-6) 0;
+}
+
+.quiz-option-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) var(--spacing-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  background: #fff;
+  transition: all var(--transition-fast);
+  font-size: var(--font-size-sm);
+  position: relative;
+}
+
+.quiz-option-label:hover {
+  background: var(--color-bg-alt);
+  border-color: var(--color-primary-light);
+}
+
+.quiz-option-label.selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-option-label input[type="radio"] {
+  accent-color: var(--color-primary);
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+}
+
+.quiz-result-score-badge {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin: var(--spacing-3) 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Virtual Mock Drill Interface
+   -------------------------------------------------------------------------- */
+.drill-runner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.drill-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-3) var(--spacing-5);
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.drill-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-top: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-6);
+}
+
+.drill-situation-box {
+  background: var(--color-bg-alt);
+  border-left: 4px solid var(--color-accent);
+  padding: var(--spacing-5);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: var(--spacing-6);
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+}
+
+.drill-choice-btn {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-4) var(--spacing-5);
+  margin-bottom: var(--spacing-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #fff;
+  color: var(--color-text-main);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.drill-choice-btn:hover {
+  background: var(--color-primary-subtle);
+  border-color: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+.drill-choice-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.drill-feedback-box {
+  padding: var(--spacing-5);
+  border-radius: var(--radius-md);
+  margin: var(--spacing-6) 0;
+  animation: fadeIn 300ms ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------------------------------
+   5. First-Aid Learning Center
+   -------------------------------------------------------------------------- */
+.first-aid-tabs {
+  display: flex;
+  gap: var(--spacing-2);
+  border-bottom: 2px solid var(--color-border-subtle);
+  margin-bottom: var(--spacing-8);
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.first-aid-tab-btn {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.first-aid-tab-btn:hover {
+  color: var(--color-primary);
+}
+
+.first-aid-tab-btn.active {
+  color: var(--color-danger);
+  border-bottom-color: var(--color-danger);
+}
+
+.protocol-step-card {
+  display: flex;
+  gap: var(--spacing-4);
+  padding: var(--spacing-5);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-4);
+}
+
+.step-number-badge {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--color-danger-subtle);
+  color: var(--color-danger);
+  border: 1px solid #fecaca;
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. Authentication Form Container
+   -------------------------------------------------------------------------- */
+.auth-wrapper {
+  max-width: 480px;
+  margin: var(--spacing-10) auto;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.auth-header .brand-icon {
+  margin: 0 auto var(--spacing-3) auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .course-viewer-layout {
+    grid-template-columns: 1fr;
+  }
+  .lesson-sidebar {
+    position: static;
+  }
+  .dos-donts-grid {
+    grid-template-columns: 1fr;
+  }
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suraksha - Frontend Test Runner</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      background-color: #f8fafc;
+      color: #0f172a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 2rem;
+    }
+    .test-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+    .test-header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .badge-pass {
+      background: #10b981;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .badge-fail {
+      background: #ef4444;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .test-item {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .test-item:last-child {
+      border-bottom: none;
+    }
+    .summary-card {
+      background: #f1f5f9;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <div class="test-header">
+      <h1>Suraksha Frontend API Client Test Runner</h1>
+      <p>Automated in-browser verification of API client contracts, token lifecycle, error handling, and envelope unwrapping.</p>
+      <button id="runBtn" class="btn btn-primary" style="margin-top: 0.5rem; padding: 0.5rem 1rem;">Run All Tests</button>
+    </div>
+
+    <div id="testOutput">Click "Run All Tests" or wait for auto-execution...</div>
+
+    <div id="summaryCard" class="summary-card" style="display: none;">
+      <span id="summaryText">Summary</span>
+      <span id="summaryBadge"></span>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="api.test.js"></script>
+  <script>
+    async function execute() {
+      const output = document.getElementById("testOutput");
+      const summaryCard = document.getElementById("summaryCard");
+      const summaryText = document.getElementById("summaryText");
+      const summaryBadge = document.getElementById("summaryBadge");
+
+      output.innerHTML = "<p>Running tests...</p>";
+      const result = await window.runFrontendTests();
+
+      output.innerHTML = "";
+      result.results.forEach(r => {
+        const item = document.createElement("div");
+        item.className = "test-item";
+        item.innerHTML = `
+          <span>${r.name}</span>
+          <span class="${r.status === 'PASS' ? 'badge-pass' : 'badge-fail'}">${r.status}</span>
+        `;
+        if (r.error) {
+          const errDiv = document.createElement("div");
+          errDiv.style.color = "#dc2626";
+          errDiv.style.fontSize = "0.85rem";
+          errDiv.textContent = r.error;
+          item.appendChild(errDiv);
+        }
+        output.appendChild(item);
+      });
+
+      summaryCard.style.display = "flex";
+      summaryText.textContent = `Completed: ${result.passed} Passed, ${result.failed} Failed`;
+      if (result.failed === 0) {
+        summaryBadge.className = "badge-pass";
+        summaryBadge.textContent = "ALL TESTS PASSED";
+      } else {
+        summaryBadge.className = "badge-fail";
+        summaryBadge.textContent = "TEST FAILURES DETECTED";
+      }
+    }
+
+    document.getElementById("runBtn").addEventListener("click", execute);
+    window.addEventListener("DOMContentLoaded", execute);
+  </script>
+</body>
+</html>
